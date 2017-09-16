@@ -1,0 +1,34 @@
+{
+  "name": "ej2-graphql-adaptor",
+  "version": "1.0.0",
+  "description": "GraphQL Data Adaptor for EJ2 DataManager",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./node_modules/typescript/bin/tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madhust/ej2-graphql-adaptor.git"
+  },
+  "keywords": [
+    "ej2-data",
+    "ej2",
+    "graphql",
+    "graphql-adaptor",
+    "custom-adaptor",
+    "adaptor"
+  ],
+  "author": "Madhu Sudhanan P",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Madhust/ej2-graphql-adaptor/issues"
+  },
+  "homepage": "https://github.com/Madhust/ej2-graphql-adaptor#readme",
+  "dependencies": {
+    "@syncfusion/ej2-data": "*"
+  },
+  "devDependencies": {
+    "typescript": "*"
+  }
+}

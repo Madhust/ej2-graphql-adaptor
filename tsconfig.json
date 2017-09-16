@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "module": "amd",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "removeComments": true,
+        "suppressImplicitAnyIndexErrors": true
+    }
+}
