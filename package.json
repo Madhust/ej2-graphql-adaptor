@@ -4,7 +4,7 @@
   "description": "GraphQL Data Adaptor for EJ2 DataManager",
   "main": "index.js",
   "scripts": {
-    "build": "node ./node_modules/typescript/bin/tsc",
+    "build": "node ./node_modules/typescript/bin/tsc && node ./node_modules/typescript/bin/tsc -p tsconfig-common.json",
     "test": "npm run build && node ./node_modules/karma/bin/karma start"
   },
   "repository": {

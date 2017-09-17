@@ -1,7 +1,8 @@
 node_modules
-!karma.conf.js
-!test-main.js
+karma.conf.js
+test-main.js
 spec/
 .travis.yml
 *.ts
 tsconfig.json
+tsconfig-common.json
