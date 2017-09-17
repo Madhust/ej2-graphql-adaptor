@@ -3,16 +3,16 @@ import { DataManager, Query, UrlAdaptor, DataOptions } from '@syncfusion/ej2-dat
 export interface GraphQLAdaptorOptions {
     response: { result: string, count: string };
     query: string;
-    getQuery: () => string;
-    getVariables: () => Object;
+    getQuery?: () => string;
+    getVariables?: () => Object;
 }
 
-class GraphQLAdaptor extends UrlAdaptor {
+export class GraphQLAdaptor extends UrlAdaptor {
     public opt: GraphQLAdaptorOptions;
-    public schema = this.opt.response;
-    public query = this.opt.query;
-    public getVariables = () => {};
-    public getQuery = () => this.query;
+    public schema: { result: string, count: string };
+    public query: string;
+    public getVariables: Function;
+    public getQuery: Function;
     constructor(options: GraphQLAdaptorOptions) {
         super();
         this.opt = options;
