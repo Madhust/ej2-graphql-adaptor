@@ -6,6 +6,5 @@ deploy:
  email: "madhusudhananit@gmail.com"
  api_key: "4d447d39-f2c7-4e60-864f-2810a561e7a4"
  skip_cleanup: true
- tag: next
  on:
    branch: master

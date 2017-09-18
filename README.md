@@ -9,6 +9,8 @@ GraphQL Data Adaptor for EJ2 DataManager
 This adaptor helps EJ2 [`DataManager`](https://www.npmjs.com/package/@syncfusion/ej2-data) to interact with GraphQL endpoint. The simple `GraphQLAdaptor` initialization will look like below.
 
 ```typescript
+import { GraphQLAdaptor } from 'ej2-graphql-adaptor';
+
 let adaptor: GraphQLAdaptor = new GraphQLAdaptor({
             response: {
                 result: 'orders',
@@ -31,7 +33,7 @@ let adaptor: GraphQLAdaptor = new GraphQLAdaptor({
 To include the [`DataManager`](https://www.npmjs.com/package/@syncfusion/ej2-data) schema at the GraphQL server, use the below code example.
 
 ```typescript
-import { schema } from 'ej2-graphql-adaptor/schema';
+import { schema } from 'ej2-graphql-adaptor/schema/schema';
 
 module.exports =
 `${scheme}
