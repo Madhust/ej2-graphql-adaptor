@@ -5,6 +5,7 @@ export interface GraphQLAdaptorOptions {
     query: string;
     getQuery?: () => string;
     getVariables?: () => Object;
+    getMutation?: (action: string) => string;
 }
 
 export class GraphQLAdaptor extends UrlAdaptor {
@@ -13,6 +14,7 @@ export class GraphQLAdaptor extends UrlAdaptor {
     public query: string;
     public getVariables: Function;
     public getQuery: Function;
+
     constructor(options: GraphQLAdaptorOptions) {
         super();
         this.opt = options;
@@ -38,5 +40,29 @@ export class GraphQLAdaptor extends UrlAdaptor {
         var result = data.data[this.schema.result];
         var count = data.data[this.schema.count];
         return query.requiresCount ? { result: result, count: count } : result;
+    }
+
+    insert(dm: DataManager, data: Object, tableName: string) {
+        let inserted = super.insert.apply(this, arguments);
+        return this.generateData(inserted, 'insert');
+    }
+
+    update(dm: DataManager, data: Object, tableName: string) {
+        let inserted = super.update.apply(this, arguments);
+        return this.generateData(inserted, 'update');
+    }
+
+    remove(dm: DataManager, data: Object, tableName: string) {
+        let inserted = super.remove.apply(this, arguments);
+        return this.generateData(inserted, 'remove');
+    }
+
+    generateData(inserted: { data: string }, action: string) {
+        let parsed = JSON.parse(inserted.data);
+        inserted.data = JSON.stringify({
+            query: this.opt.getMutation(action),
+            variables: parsed
+        });
+        return inserted;
     }
 }
