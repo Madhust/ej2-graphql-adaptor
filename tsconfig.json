@@ -8,6 +8,7 @@
         "noImplicitReturns": true,
         "removeComments": true,
         "suppressImplicitAnyIndexErrors": true,
+        "declaration": true,
         "types": [
             "jasmine",
             "jasmine-ajax"

@@ -2,3 +2,4 @@ node_modules
 *.js
 !karma.conf.js
 !test-main.js
+*.d.ts

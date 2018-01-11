@@ -4,5 +4,6 @@ test-main.js
 spec/
 .travis.yml
 *.ts
+!*.d.ts
 tsconfig.json
 tsconfig-common.json
