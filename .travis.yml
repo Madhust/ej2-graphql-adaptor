@@ -4,7 +4,7 @@ node_js:
 deploy:
  provider: npm
  email: "madhusudhananit@gmail.com"
- api_key: "4d447d39-f2c7-4e60-864f-2810a561e7a4"
+ api_key: "d1335c21-2299-4e82-99f6-5444425f2da2"
  skip_cleanup: true
  on:
    branch: master
